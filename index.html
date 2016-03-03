@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Wp8 powershell scripts by dzmedia</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <meta name="viewport" content="width=device-width">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Wp8 powershell scripts</h1>
+        <p>I created this pair of PowerShell scripts for the Windows Phone 8 SDK in order to allow Enterprise IT Pros to optimize app packages, as the WIndows Phone Store does, in order to deploy them directly to employees devices without having to go through Store publishing.  www.linkedin.com/in/danzucker</p>
+
+        <p class="view"><a href="https://github.com/dzmedia/WP8_PowerShell_Scripts">View the Project on GitHub <small>dzmedia/WP8_PowerShell_Scripts</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/dzmedia/WP8_PowerShell_Scripts/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/dzmedia/WP8_PowerShell_Scripts/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/dzmedia/WP8_PowerShell_Scripts">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h3>
+<a id="windows-phone-8-net-optimization" class="anchor" href="#windows-phone-8-net-optimization" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Windows Phone 8 .NET Optimization</h3>
+
+<p>Under the covers, deploying a Windows Phone 8 app to a device requires that the app's IL (Intermediate Language) code be precompiled in such a way that it can bind to the actual offsets of the platform assemblies on the hardware being installed to. Without the precompilation and binding an app will compile just-in-time on a device which is undesirable from a few different angles. Additionally, an app package must be signed in order to deploy. </p>
+
+<h3>
+<a id="which-tool-what-steps" class="anchor" href="#which-tool-what-steps" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Which Tool, What Steps?</h3>
+
+<p>The fun gets funner, though, because a Windows Phone 8 app package can contain components with up to three different run times. Each runtime implies different precompiler versions and signing procedures. Both the Visual Studio local deployment flow and the Windows Phone Store publishing pipeline incorporate all the steps to detect the runtimes utilized by an app and to enact the right steps.</p>
+
+<h3>
+<a id="help-for-the-it-pro" class="anchor" href="#help-for-the-it-pro" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Help for the IT Pro</h3>
+
+<p>However, pity the poor Enterprise IT Pro tasked with understanding how to recreate their own pipeline in order to deploy Windows Phone 8 apps directly to their employees devices without publishing them to the Store. I did, with the result that you see here. </p>
+
+<blockquote>
+<p><strong>BuildMDILAPPX.ps1</strong> - Is the one to use for pure APPX packages containing only WP 8 and/or native assemblies.</p>
+
+<p><strong>BuildMDILSL81XAP.ps1</strong> - Is the one to use for hybrid XAP packages that also contain Silverlight assemblies.</p>
+</blockquote>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/dzmedia">dzmedia</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
